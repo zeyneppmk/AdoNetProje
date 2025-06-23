@@ -1,0 +1,37 @@
+﻿@page
+@model pzt_adoNetCore.Pages.Users.IndexModel
+@{
+}
+
+<br />
+<h2>Kullanıcılar</h2>
+<a class="btn btn-primary btn-sm" href="/Users/Create">Kullanıcı Ekle</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Kullanıcı No</th>
+            <th>Ad Soyad</th>
+            <th>Email</th>
+            <th>Telefon</th>
+            <th>Kullanıcı Rolü</th>
+            <th>Şifre</th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model.listele)
+{
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.fullName</td>
+                <td>@item.email</td>
+                <td>@item.telefon</td>
+                <td>@item.userRole</td>
+                <td>@item.password</td>
+                <td><a class="btn btn-primary btn-sm" href="/Users/Edit/?id=@item.ID"></a>Edit</td>
+                <td><a class="btn btn-primary btn-sm" href="/Users/Delete/?id=@item.ID"></a>Delete</td>
+            </tr>
+}
+    </tbody>
+</table>

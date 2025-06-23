@@ -1,0 +1,27 @@
+﻿@page
+@using System.Data.SqlClient;
+@{
+
+    try
+    {
+        string ID = Request.Query["ID"];
+        string connectionString = "Server=localhost; Database=Egitim; User Id=SA; Password=reallyStrongPwd123; TrustServerCertificate=True;";
+
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+
+            connection.Open();
+            string sql = "delete from Userlar where ID=@ID";
+            using (SqlCommand command = new SqlCommand(sql, connection))
+            {
+                command.Parameters.AddWithValue("@ID", ID);
+                command.ExecuteNonQuery();
+            }
+        }
+    }
+    catch (Exception ex)
+    {
+
+    }
+    Response.Redirect("/Users/Index");
+}
