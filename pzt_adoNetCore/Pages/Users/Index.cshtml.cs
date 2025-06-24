@@ -33,7 +33,7 @@ namespace pzt_adoNetCore.Pages.Users
                         islem.email = reader.GetString(2);
                         islem.telefon =""+ reader.GetInt32(3);
                         islem.userRole = reader.GetString(4);
-                        islem.password = reader.GetString(4);
+                        islem.sifre = reader.GetString(4);
 
                         listele.Add(islem);
                     }

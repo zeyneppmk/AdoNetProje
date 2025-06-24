@@ -8,7 +8,7 @@ namespace pzt_adoNetCore.Pages.Users
         public string email;
         public string telefon;
         public string userRole;
-        public string password;
+        public string sifre;
 
     }
 }
