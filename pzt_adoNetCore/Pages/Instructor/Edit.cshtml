@@ -1,0 +1,82 @@
+﻿@page
+@model pzt_adoNetCore.Pages.Instructor.EditModel
+@{
+}
+
+<form method="post">
+    <input type="hidden" name="ID" asp-for="egitmenbilgi.insID" value="@Model.egitmenbilgi.insID" />
+
+
+    <div class="row mb-3">
+
+        <label class="col-sm-3">Ad Soyad</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="fullName" value="@Model.egitmenbilgi.fullName" />
+
+        </div>
+
+    </div>
+
+    <div class="row mb-3">
+
+        <label class="col-sm-3">Email</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="email" value="@Model.egitmenbilgi.email" />
+
+        </div>
+
+    </div>
+
+    <div class="row mb-3">
+
+        <label class="col-sm-3">Alan</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="alan" value="@Model.egitmenbilgi.alan" />
+
+        </div>
+
+    </div>
+
+    <div class="row mb-3">
+
+        <label class="col-sm-3">Telefon</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="telefon" value="@Model.egitmenbilgi.telefon" />
+
+        </div>
+
+    </div>
+
+    <div class="row mb-3">
+
+        <label class="col-sm-3">Kullanıcı Rolü</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="userRole" value="@Model.egitmenbilgi.userRole" />
+
+        </div>
+
+    </div>
+
+    <div class="row mb-3">
+
+        <label class="col-sm-3">Şifre</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="sifre" value="@Model.egitmenbilgi.sifre" />
+
+        </div>
+
+    </div>
+
+    <div class="row mb-3">
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+
+        </div>
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/">İPTAL</a>
+
+        </div>
+
+    </div>
+</form>
+

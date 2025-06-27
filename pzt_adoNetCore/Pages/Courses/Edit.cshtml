@@ -1,0 +1,53 @@
+﻿@page
+@model pzt_adoNetCore.Pages.Courses.EditModel
+@{
+}
+
+<form method="post">
+    <input type="hidden" name="id" asp-for="kursbilgi.coursId" value="@Model.kursbilgi.coursId" />
+
+
+    <div class="row mb-3">
+
+        <label class="col-sm-3">Kurs Adı</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="title" value="@Model.kursbilgi.title" />
+
+        </div>
+
+    </div>
+
+    <div class="row mb-3">
+
+        <label class="col-sm-3">Kurs Süresi</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="time" value="@Model.kursbilgi.time" />
+
+        </div>
+
+    </div>
+
+    <div class="row mb-3">
+
+        <label class="col-sm-3">İçerik</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="description" value="@Model.kursbilgi.description" />
+
+        </div>
+
+    </div>
+
+
+    <div class="row mb-3">
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+
+        </div>
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/">İPTAL</a>
+
+        </div>
+
+    </div>
+</form>
+

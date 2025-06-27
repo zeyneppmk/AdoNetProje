@@ -10,9 +10,15 @@
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
     <None Remove="Pages\Users\" />
+    <None Remove="Pages\Instructor\" />
+    <None Remove="Pages\Courses\" />
+    <None Remove="Pages\Rapor\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\Users\" />
+    <Folder Include="Pages\Instructor\" />
+    <Folder Include="Pages\Courses\" />
+    <Folder Include="Pages\Rapor\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />

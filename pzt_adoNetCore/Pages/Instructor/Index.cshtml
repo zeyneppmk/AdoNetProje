@@ -1,0 +1,37 @@
+﻿@page
+@model pzt_adoNetCore.Pages.Instructor.IndexModel
+@{
+}
+
+<br />
+<h2>Eğitmenler</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Eğitmen No</th>
+            <th>Ad Soyad</th>
+            <th>Email</th>
+            <th>Branş</th>
+            <th>Telefon</th>
+            <th>Kullanıcı Rolü</th>
+            <th>Şifre</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model.listele)
+        {
+            <tr>
+                <td>@item.insID</td>
+                <td>@item.fullName</td>
+                <td>@item.email</td>
+                <td>@item.alan</td>
+                <td>@item.telefon</td>
+                <td>@item.userRole</td>
+                <td>@item.sifre</td>
+                <td><a class="btn btn-primary btn-sm" href="/Instructor/Edit?id=@item.insID">Edit</a></td>
+                <td><a class="btn btn-primary btn-sm" href="/Instructor/Delete?id=@item.insID">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -34,7 +34,7 @@ namespace pzt_adoNetCore.Pages.Users
                             userbilgi.ID = "" + reader.GetInt32(0);
                             userbilgi.fullName = reader.GetString(1);
                             userbilgi.email = reader.GetString(2);
-                            userbilgi.telefon = reader.GetString(2);
+                            userbilgi.telefon = "" + reader.GetInt32(3);
                             userbilgi.userRole = reader.GetString(4);
                             userbilgi.sifre = reader.GetString(5);
 

@@ -1,0 +1,52 @@
+﻿@page
+@model pzt_adoNetCore.Pages.Rapor.IndexModel
+@{
+}
+
+<h2>Veritabanı Raporu</h2>
+
+<div class="alert alert-info">
+    <p>Toplam Öğrenci Sayısı: <strong>@Model.OgrenciSayisi</strong></p>
+    <p>Toplam Kurs Sayısı: <strong>@Model.KursSayisi</strong></p>
+    <p>Toplam Eğitmen Sayısı: <strong>@Model.EgitmenSayisi</strong></p>
+</div>
+
+<a class="btn btn-secondary" href="/Courses/Index">← Geri Dön</a>
+
+<h3>Alanlara Göre Eğitmen Sayısı</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Alan</th>
+            <th>Eğitmen Sayısı</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.EgitmenAlanDagilimi)
+        {
+            <tr>
+                <td>@item.Key</td>
+                <td>@item.Value</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Süreye Göre Kurs Sayısı</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Süre</th>
+            <th>Kurs Sayısı</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.KursSureDagilimi)
+        {
+            <tr>
+                <td>@item.Key</td>
+                <td>@item.Value</td>
+            </tr>
+        }
+    </tbody>
+</table>

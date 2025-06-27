@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("pzt_adoNetCore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8eaed5e23037f03bb35af06ae55fd6de050f39d3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d443f7ceaee654a2a4e6c47a7a05113cc118bf7")]
 [assembly: System.Reflection.AssemblyProductAttribute("pzt_adoNetCore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("pzt_adoNetCore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,59 @@
+﻿@page
+@model pzt_adoNetCore.Pages.Courses.IndexModel
+@{
+}
+@{
+    var arama = Request.Query["arama"].ToString();
+    var sure = Request.Query["sure"].ToString();
+    var sirala = Request.Query["sirala"].ToString();
+}
+
+
+
+<br />
+<h2>Eğitimler</h2>
+<form method="get" class="mb-3">
+    <input type="text" name="arama" placeholder="Kurs adı ara" value="@arama" />
+
+    <select name="sure">
+        <option value="">Süre seç</option>
+        <option value="1 saat" selected="@(sure == "1 saat" ? "selected" : null)">1 saat</option>
+        <option value="2 saat" selected="@(sure == "2 saat" ? "selected" : null)">2 saat</option>
+        <option value="3 saat" selected="@(sure == "3 saat" ? "selected" : null)">3 saat</option>
+    </select>
+
+
+    <select name="sirala">
+        <option value="">Sıralama</option>
+        <option value="asc" selected="@(sirala == "asc" ? "selected" : null)">A-Z</option>
+        <option value="desc" selected="@(sirala == "desc" ? "selected" : null)">Z-A</option>
+    </select>
+
+
+    <button type="submit" class="btn btn-primary btn-sm">Ara / Filtrele</button>
+</form>
+<a class="btn btn-primary btn-sm" href="/Courses/Create">Eğitim Ekle</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Kurs ID</th>
+            <th>Kurs Adı</th>
+            <th>Kurs Süresi</th>
+            <th>İçerik</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model.listele)
+        {
+            <tr>
+                <td>@item.coursId</td>
+                <td>@item.title</td>
+                <td>@item.time</td>
+                <td>@item.description</td>
+                <td><a class="btn btn-primary btn-sm" href="/Courses/Edit?id=@item.coursId">Edit</a></td>
+                <td><a class="btn btn-primary btn-sm" href="/Courses/Delete?id=@item.coursId">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,51 @@
+﻿@page
+@model pzt_adoNetCore.Pages.Courses.CreateModel
+@{
+}
+
+
+<br />
+<h2>Eğitim Ekleme Ekranı</h2>
+@if (Model.ErrorMessage.Length > 0)
+{
+    <div class="alert alert-warning alrt-dismissible fade show" role="alert">
+        <strong>
+            @Model.ErrorMessage
+        </strong>
+        <button type="button" class="btn-close" data-dismiss="alert" aria-label="close"></button>
+    </div>
+}
+
+
+<form method="post">
+    <div class="row mb-3">
+        <label for="title" class="col-sm-3 col-form-label">Kurs Adı</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" id="title" name="title" value="@Model.kursBilgi.title" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="time" class="col-sm-3 col-form-label">Kurs Süresi</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" id="time" name="time" value="@Model.kursBilgi.time" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="description" class="col-sm-3 col-form-label">İçerik</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" id="description" name="description" value="@Model.kursBilgi.description" />
+        </div>
+    </div>
+
+
+    <div class="row mb-3">
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+        </div>
+        <div class="col-sm-3 d-grid">
+            <a href="#" class="btn btn-secondary">İptal</a>
+        </div>
+    </div>
+</form>

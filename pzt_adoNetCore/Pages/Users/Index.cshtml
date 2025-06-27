@@ -1,11 +1,11 @@
 ﻿@page
 @model pzt_adoNetCore.Pages.Users.IndexModel
-@{
+@{     Layout = "~/Pages/Shared/_Layout.cshtml";
+
 }
 
 <br />
 <h2>Kullanıcılar</h2>
-<a class="btn btn-primary btn-sm" href="/Users/Create">Kullanıcı Ekle</a>
 <table class="table">
     <thead>
         <tr>
@@ -29,8 +29,8 @@
                 <td>@item.telefon</td>
                 <td>@item.userRole</td>
                 <td>@item.sifre</td>
-                <td><a class="btn btn-primary btn-sm" href="/Users/Edit/?id=@item.ID"></a>Edit</td>
-                <td><a class="btn btn-primary btn-sm" href="/Users/Delete/?id=@item.ID"></a>Delete</td>
+                <td><a class="btn btn-primary btn-sm" href="/Users/Edit?id=@item.ID">Edit</a></td>
+                <td><a class="btn btn-primary btn-sm" href="/Users/Delete?id=@item.ID">Delete</a></td>
             </tr>
 }
     </tbody>

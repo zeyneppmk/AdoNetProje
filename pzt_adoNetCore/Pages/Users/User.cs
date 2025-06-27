@@ -9,7 +9,6 @@ namespace pzt_adoNetCore.Pages.Users
         public string telefon;
         public string userRole;
         public string sifre;
-
     }
 }
 
