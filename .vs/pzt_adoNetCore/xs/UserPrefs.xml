@@ -1,18 +1,21 @@
 ﻿<Properties StartupConfiguration="{E1263F2A-EF50-4185-9588-4FE6F021ADFD}|https">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.pzt__adoNetCore PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="pzt_adoNetCore/Pages/Shared/_Layout.cshtml">
     <Files>
-      <File FileName="pzt_adoNetCore/Pages/Rapor/Index.cshtml" Line="45" Column="10" />
-      <File FileName="pzt_adoNetCore/Pages/Rapor/Index.cshtml.cs" Line="56" Column="56" />
-      <File FileName="pzt_adoNetCore/Pages/Shared/_Layout.cshtml" Line="58" Column="60" />
+      <File FileName="pzt_adoNetCore/Pages/Rapor/Index.cshtml" />
+      <File FileName="pzt_adoNetCore/Pages/Rapor/Index.cshtml.cs" />
+      <File FileName="pzt_adoNetCore/Pages/Shared/_Layout.cshtml" Line="48" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="pzt_adoNetCore" expanded="True">
-            <Node name="pzt_adoNetCore">
-              <Node name="Pages">
-                <Node name="Rapor" selected="True" />
+            <Node name="pzt_adoNetCore" expanded="True">
+              <Node name="Pages" expanded="True">
+                <Node name="Rapor" expanded="True" />
+                <Node name="Shared" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -20,10 +23,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.pzt__adoNetCore PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
 </Properties>
